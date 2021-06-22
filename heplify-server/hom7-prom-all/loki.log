@@ -1,0 +1,323 @@
+compose.config.config.find: Using configuration files: ./docker-compose.yml
+docker.utils.config.find_config_file: Trying paths: ['/root/snap/docker/423/.docker/config.json', '/root/snap/docker/423/.dockercfg']
+docker.utils.config.find_config_file: No config file found
+docker.utils.config.find_config_file: Trying paths: ['/root/snap/docker/423/.docker/config.json', '/root/snap/docker/423/.dockercfg']
+docker.utils.config.find_config_file: No config file found
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/version HTTP/1.1" 200 537
+compose.cli.command.get_client: docker-compose version 1.23.2, build unknown
+docker-py version: 3.7.3
+CPython version: 2.7.12
+OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+compose.cli.command.get_client: Docker base_url: http+docker://localhost
+compose.cli.command.get_client: Docker version: KernelVersion=4.15.0-91-generic, Components=[{u'Version': u'18.09.9', u'Name': u'Engine', u'Details': {u'KernelVersion': u'4.15.0-91-generic', u'Os': u'linux', u'BuildTime': u'2019-11-16T01:07:48.000000000+00:00', u'ApiVersion': u'1.39', u'MinAPIVersion': u'1.12', u'GitCommit': u'9552f2b', u'Arch': u'amd64', u'Experimental': u'false', u'GoVersion': u'go1.13.4'}}], Arch=amd64, BuildTime=2019-11-16T01:07:48.000000000+00:00, ApiVersion=1.39, Platform={u'Name': u''}, Version=18.09.9, MinAPIVersion=1.12, GitCommit=9552f2b, Os=linux, GoVersion=go1.13.4
+compose.cli.verbose_proxy.proxy_callable: docker inspect_network <- (u'hom7promall_default')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/networks/hom7promall_default HTTP/1.1" 404 52
+compose.cli.verbose_proxy.proxy_callable: docker inspect_volume <- (u'hom7promall_grafana_data')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/volumes/hom7promall_grafana_data HTTP/1.1" 404 59
+compose.cli.verbose_proxy.proxy_callable: docker inspect_volume <- (u'hom7promall_prometheus_data')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/volumes/hom7promall_prometheus_data HTTP/1.1" 404 62
+compose.cli.verbose_proxy.proxy_callable: docker info <- ()
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/info HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker info -> {u'Architecture': u'x86_64',
+ u'BridgeNfIp6tables': True,
+ u'BridgeNfIptables': True,
+ u'CPUSet': True,
+ u'CPUShares': True,
+ u'CgroupDriver': u'cgroupfs',
+ u'ClusterAdvertise': u'',
+ u'ClusterStore': u'',
+ u'ContainerdCommit': {u'Expected': u'894b81a4b802e4eb2a91d1ce216b8817763c29fb',
+                       u'ID': u'894b81a4b802e4eb2a91d1ce216b8817763c29fb'},
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_network <- (u'hom7-prom-all_default')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/networks/hom7-prom-all_default HTTP/1.1" 200 1307
+compose.cli.verbose_proxy.proxy_callable: docker inspect_network -> {u'Attachable': True,
+ u'ConfigFrom': {u'Network': u''},
+ u'ConfigOnly': False,
+ u'Containers': {u'079c0d884da6462cf459ed295efb6123a87e4984da0e21fc632b288e7a0b05dc': {u'EndpointID': u'233f7163a0a864b9935d265ff9de4bde45f9857055806eb477281d096dbf90e2',
+                                                                                       u'IPv4Address': u'172.18.0.2/16',
+                                                                                       u'IPv6Address': u'',
+                                                                                       u'MacAddress': u'02:42:ac:12:00:02',
+                                                                                       u'Name': u'db'},
+                 u'188dc3390aa002cdeced20751ec550636bf014d5e581540a1e2f049afd2189ac': {u'EndpointID': u'2ced3142f5887b6077a07b2d377ae2a2615e089849b07b6536c3172d631c8b5a',
+                                                                                       u'IPv4Address': u'172.18.0.8/16',
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_volume <- (u'hom7-prom-all_prometheus_data')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/volumes/hom7-prom-all_prometheus_data HTTP/1.1" 200 362
+compose.cli.verbose_proxy.proxy_callable: docker inspect_volume -> {u'CreatedAt': u'2020-04-21T09:00:03Z',
+ u'Driver': u'local',
+ u'Labels': {u'com.docker.compose.project': u'hom7-prom-all',
+             u'com.docker.compose.version': u'1.22.0',
+             u'com.docker.compose.volume': u'prometheus_data'},
+ u'Mountpoint': u'/var/snap/docker/common/var-lib-docker/volumes/hom7-prom-all_prometheus_data/_data',
+ u'Name': u'hom7-prom-all_prometheus_data',
+ u'Options': None,
+ u'Scope': u'local'}
+compose.cli.verbose_proxy.proxy_callable: docker inspect_volume <- (u'hom7-prom-all_prometheus_data')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/volumes/hom7-prom-all_prometheus_data HTTP/1.1" 200 362
+compose.cli.verbose_proxy.proxy_callable: docker inspect_volume -> {u'CreatedAt': u'2020-04-21T09:00:03Z',
+ u'Driver': u'local',
+ u'Labels': {u'com.docker.compose.project': u'hom7-prom-all',
+             u'com.docker.compose.version': u'1.22.0',
+             u'com.docker.compose.volume': u'prometheus_data'},
+ u'Mountpoint': u'/var/snap/docker/common/var-lib-docker/volumes/hom7-prom-all_prometheus_data/_data',
+ u'Name': u'hom7-prom-all_prometheus_data',
+ u'Options': None,
+ u'Scope': u'local'}
+compose.cli.verbose_proxy.proxy_callable: docker inspect_volume <- (u'hom7-prom-all_grafana_data')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/volumes/hom7-prom-all_grafana_data HTTP/1.1" 200 353
+compose.cli.verbose_proxy.proxy_callable: docker inspect_volume -> {u'CreatedAt': u'2020-04-21T10:04:04Z',
+ u'Driver': u'local',
+ u'Labels': {u'com.docker.compose.project': u'hom7-prom-all',
+             u'com.docker.compose.version': u'1.22.0',
+             u'com.docker.compose.volume': u'grafana_data'},
+ u'Mountpoint': u'/var/snap/docker/common/var-lib-docker/volumes/hom7-prom-all_grafana_data/_data',
+ u'Name': u'hom7-prom-all_grafana_data',
+ u'Options': None,
+ u'Scope': u'local'}
+compose.cli.verbose_proxy.proxy_callable: docker inspect_volume <- (u'hom7-prom-all_grafana_data')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/volumes/hom7-prom-all_grafana_data HTTP/1.1" 200 353
+compose.cli.verbose_proxy.proxy_callable: docker inspect_volume -> {u'CreatedAt': u'2020-04-21T10:04:04Z',
+ u'Driver': u'local',
+ u'Labels': {u'com.docker.compose.project': u'hom7-prom-all',
+             u'com.docker.compose.version': u'1.22.0',
+             u'com.docker.compose.volume': u'grafana_data'},
+ u'Mountpoint': u'/var/snap/docker/common/var-lib-docker/volumes/hom7-prom-all_grafana_data/_data',
+ u'Name': u'hom7-prom-all_grafana_data',
+ u'Options': None,
+ u'Scope': u'local'}
+compose.cli.verbose_proxy.proxy_callable: docker containers <- (all=False, filters={u'label': [u'com.docker.compose.project=hom7-prom-all', u'com.docker.compose.oneoff=False']})
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/containers/json?all=0&limit=-1&filters=%7B%22label%22%3A+%5B%22com.docker.compose.project%3Dhom7-prom-all%22%2C+%22com.docker.compose.oneoff%3DFalse%22%5D%7D&trunc_cmd=0&size=0 HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker containers -> (list with 4 items)
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container <- (u'197e6629fb8458a68d131d9b5b3d585414994ff1dbba54b3ed125c0ac581ae23')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/containers/197e6629fb8458a68d131d9b5b3d585414994ff1dbba54b3ed125c0ac581ae23/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container -> {u'AppArmorProfile': u'docker-default',
+ u'Args': [u'-config.file=/etc/loki/local-config.yaml'],
+ u'Config': {u'ArgsEscaped': True,
+             u'AttachStderr': False,
+             u'AttachStdin': False,
+             u'AttachStdout': False,
+             u'Cmd': [u'-config.file=/etc/loki/local-config.yaml'],
+             u'Domainname': u'',
+             u'Entrypoint': [u'/usr/bin/loki'],
+             u'Env': [u'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'],
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container <- (u'079c0d884da6462cf459ed295efb6123a87e4984da0e21fc632b288e7a0b05dc')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/containers/079c0d884da6462cf459ed295efb6123a87e4984da0e21fc632b288e7a0b05dc/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container -> {u'AppArmorProfile': u'docker-default',
+ u'Args': [u'postgres'],
+ u'Config': {u'ArgsEscaped': True,
+             u'AttachStderr': False,
+             u'AttachStdin': False,
+             u'AttachStdout': False,
+             u'Cmd': [u'postgres'],
+             u'Domainname': u'',
+             u'Entrypoint': [u'docker-entrypoint.sh'],
+             u'Env': [u'POSTGRES_PASSWORD=homerSeven',
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container <- (u'e2116a851e606a7d8376e767402c3002f370616dd1480829ea29308865a354df')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/containers/e2116a851e606a7d8376e767402c3002f370616dd1480829ea29308865a354df/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container -> {u'AppArmorProfile': u'unconfined',
+ u'Args': [u'--path.procfs=/host/proc',
+           u'--path.sysfs=/host/sys',
+           u'--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($|/)'],
+ u'Config': {u'AttachStderr': False,
+             u'AttachStdin': False,
+             u'AttachStdout': False,
+             u'Cmd': [u'--path.procfs=/host/proc',
+                      u'--path.sysfs=/host/sys',
+                      u'--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($|/)'],
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container <- (u'188dc3390aa002cdeced20751ec550636bf014d5e581540a1e2f049afd2189ac')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/containers/188dc3390aa002cdeced20751ec550636bf014d5e581540a1e2f049afd2189ac/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container -> {u'AppArmorProfile': u'docker-default',
+ u'Args': [u'--config.file=/etc/alertmanager/config.yml',
+           u'--storage.path=/alertmanager'],
+ u'Config': {u'AttachStderr': False,
+             u'AttachStdin': False,
+             u'AttachStdout': False,
+             u'Cmd': [u'--config.file=/etc/alertmanager/config.yml',
+                      u'--storage.path=/alertmanager'],
+             u'Domainname': u'',
+             u'Entrypoint': [u'/bin/alertmanager'],
+...
+compose.cli.verbose_proxy.proxy_callable: docker containers <- (all=True, filters={u'label': [u'com.docker.compose.project=hom7-prom-all', u'com.docker.compose.service=loki', u'com.docker.compose.oneoff=False']})
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/containers/json?all=1&limit=-1&filters=%7B%22label%22%3A+%5B%22com.docker.compose.project%3Dhom7-prom-all%22%2C+%22com.docker.compose.service%3Dloki%22%2C+%22com.docker.compose.oneoff%3DFalse%22%5D%7D&trunc_cmd=0&size=0 HTTP/1.1" 200 1350
+compose.cli.verbose_proxy.proxy_callable: docker containers -> (list with 1 items)
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container <- (u'197e6629fb8458a68d131d9b5b3d585414994ff1dbba54b3ed125c0ac581ae23')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/containers/197e6629fb8458a68d131d9b5b3d585414994ff1dbba54b3ed125c0ac581ae23/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container -> {u'AppArmorProfile': u'docker-default',
+ u'Args': [u'-config.file=/etc/loki/local-config.yaml'],
+ u'Config': {u'ArgsEscaped': True,
+             u'AttachStderr': False,
+             u'AttachStdin': False,
+             u'AttachStdout': False,
+             u'Cmd': [u'-config.file=/etc/loki/local-config.yaml'],
+             u'Domainname': u'',
+             u'Entrypoint': [u'/usr/bin/loki'],
+             u'Env': [u'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'],
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image <- ('grafana/loki:master')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/images/grafana/loki:master/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image -> {u'Architecture': u'amd64',
+ u'Author': u'',
+ u'Comment': u'',
+ u'Config': {u'ArgsEscaped': True,
+             u'AttachStderr': False,
+             u'AttachStdin': False,
+             u'AttachStdout': False,
+             u'Cmd': [u'-config.file=/etc/loki/local-config.yaml'],
+             u'Domainname': u'',
+             u'Entrypoint': [u'/usr/bin/loki'],
+...
+compose.cli.verbose_proxy.proxy_callable: docker containers <- (all=True, filters={u'label': [u'com.docker.compose.project=hom7-prom-all', u'com.docker.compose.service=loki', u'com.docker.compose.oneoff=False']})
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/containers/json?all=1&limit=-1&filters=%7B%22label%22%3A+%5B%22com.docker.compose.project%3Dhom7-prom-all%22%2C+%22com.docker.compose.service%3Dloki%22%2C+%22com.docker.compose.oneoff%3DFalse%22%5D%7D&trunc_cmd=0&size=0 HTTP/1.1" 200 1350
+compose.cli.verbose_proxy.proxy_callable: docker containers -> (list with 1 items)
+compose.parallel.feed_queue: Pending: set([<Service: loki>])
+compose.parallel.feed_queue: Starting producer thread for <Service: loki>
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container <- (u'197e6629fb8458a68d131d9b5b3d585414994ff1dbba54b3ed125c0ac581ae23')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/containers/197e6629fb8458a68d131d9b5b3d585414994ff1dbba54b3ed125c0ac581ae23/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container -> {u'AppArmorProfile': u'docker-default',
+ u'Args': [u'-config.file=/etc/loki/local-config.yaml'],
+ u'Config': {u'ArgsEscaped': True,
+             u'AttachStderr': False,
+             u'AttachStdin': False,
+             u'AttachStdout': False,
+             u'Cmd': [u'-config.file=/etc/loki/local-config.yaml'],
+             u'Domainname': u'',
+             u'Entrypoint': [u'/usr/bin/loki'],
+             u'Env': [u'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'],
+...
+Recreating loki ... 
+compose.parallel.feed_queue: Pending: set([<Container: loki (197e66)>])
+compose.parallel.feed_queue: Starting producer thread for <Container: loki (197e66)>
+compose.cli.verbose_proxy.proxy_callable: docker stop <- (u'197e6629fb8458a68d131d9b5b3d585414994ff1dbba54b3ed125c0ac581ae23', timeout=10)
+urllib3.connectionpool._make_request: http://localhost:None "POST /v1.24/containers/197e6629fb8458a68d131d9b5b3d585414994ff1dbba54b3ed125c0ac581ae23/stop?t=10 HTTP/1.1" 204 0
+compose.cli.verbose_proxy.proxy_callable: docker stop -> None
+compose.cli.verbose_proxy.proxy_callable: docker rename <- (u'197e6629fb8458a68d131d9b5b3d585414994ff1dbba54b3ed125c0ac581ae23', u'197e6629fb84_loki')
+urllib3.connectionpool._make_request: http://localhost:None "POST /v1.24/containers/197e6629fb8458a68d131d9b5b3d585414994ff1dbba54b3ed125c0ac581ae23/rename?name=197e6629fb84_loki HTTP/1.1" 204 0
+compose.cli.verbose_proxy.proxy_callable: docker rename -> None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image <- ('grafana/loki:master')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/images/grafana/loki:master/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image -> {u'Architecture': u'amd64',
+ u'Author': u'',
+ u'Comment': u'',
+ u'Config': {u'ArgsEscaped': True,
+             u'AttachStderr': False,
+             u'AttachStdin': False,
+             u'AttachStdout': False,
+             u'Cmd': [u'-config.file=/etc/loki/local-config.yaml'],
+             u'Domainname': u'',
+             u'Entrypoint': [u'/usr/bin/loki'],
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image <- (u'sha256:9aed445705d50bcd29a137e93bec0ea0327aebf16c0ee2d1317eeb5ae471fc3e')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/images/sha256:9aed445705d50bcd29a137e93bec0ea0327aebf16c0ee2d1317eeb5ae471fc3e/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image -> {u'Architecture': u'amd64',
+ u'Author': u'',
+ u'Comment': u'',
+ u'Config': {u'ArgsEscaped': True,
+             u'AttachStderr': False,
+             u'AttachStdin': False,
+             u'AttachStdout': False,
+             u'Cmd': [u'-config.file=/etc/loki/local-config.yaml'],
+             u'Domainname': u'',
+             u'Entrypoint': [u'/usr/bin/loki'],
+...
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image <- ('grafana/loki:master')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/images/grafana/loki:master/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_image -> {u'Architecture': u'amd64',
+ u'Author': u'',
+ u'Comment': u'',
+ u'Config': {u'ArgsEscaped': True,
+             u'AttachStderr': False,
+             u'AttachStdin': False,
+             u'AttachStdout': False,
+             u'Cmd': [u'-config.file=/etc/loki/local-config.yaml'],
+             u'Domainname': u'',
+             u'Entrypoint': [u'/usr/bin/loki'],
+...
+compose.service.build_container_labels: Added config hash: b569bb92a80203955eb8ab06b928e53f5c005a3c8303aa22e8d608937432c03c
+compose.cli.verbose_proxy.proxy_callable: docker create_host_config <- (device_read_iops=None, mem_swappiness=None, links=[], oom_score_adj=None, blkio_weight=None, cpu_count=None, cpu_rt_period=None, cpuset_cpus=None, dns_search=None, pid_mode=None, init_path=None, log_config={'Type': u'', 'Config': {}}, cpu_quota=None, cpu_period=None, device_cgroup_rules=None, cpu_percent=None, device_read_bps=None, storage_opt=None, init=None, dns=None, volumes_from=[], ipc_mode=None, mem_reservation=None, security_opt=None, shm_size=None, device_write_iops=None, read_only=None, dns_opt=None, cgroup_parent=None, group_add=None, cpu_rt_runtime=None, volume_driver=None, oom_kill_disable=None, userns_mode=None, tmpfs=[], nano_cpus=None, network_mode=u'hom7-prom-all_default', port_bindings={'3100/tcp': ['3100']}, isolation=None, memswap_limit=None, restart_policy={u'MaximumRetryCount': 0, u'Name': u'unless-stopped'}, blkio_weight_device=None, devices=None, extra_hosts=None, binds=[], sysctls=None, pids_limit=None, device_write_bps=None, cap_add=None, mounts=None, mem_limit=None, runtime=None, cap_drop=None, privileged=False, ulimits=None, cpu_shares=None)
+compose.cli.verbose_proxy.proxy_callable: docker create_host_config -> {'Binds': [],
+ 'Links': [],
+ 'LogConfig': {'Config': {}, 'Type': u''},
+ 'NetworkMode': u'hom7-prom-all_default',
+ 'PortBindings': {'3100/tcp': [{'HostIp': '', 'HostPort': '3100'}]},
+ 'RestartPolicy': {u'MaximumRetryCount': 0, u'Name': u'unless-stopped'},
+ 'VolumesFrom': []}
+compose.cli.verbose_proxy.proxy_callable: docker create_container <- (name='loki', image='grafana/loki:master', labels={'org.label-schema.group': 'monitoring', u'com.docker.compose.service': u'loki', u'com.docker.compose.config-hash': 'b569bb92a80203955eb8ab06b928e53f5c005a3c8303aa22e8d608937432c03c', u'com.docker.compose.project': u'hom7-prom-all', u'com.docker.compose.version': u'1.23.2', u'com.docker.compose.oneoff': u'False', u'com.docker.compose.container-number': '1'}, host_config={'NetworkMode': u'hom7-prom-all_default', 'Links': [], 'PortBindings': {'3100/tcp': [{'HostPort': '3100', 'HostIp': ''}]}, 'Binds': [], 'RestartPolicy': {u'MaximumRetryCount': 0, u'Name': u'unless-stopped'}, 'LogConfig': {'Type': u'', 'Config': {}}, 'VolumesFrom': []}, environment=[], volumes={}, detach=True, ports=[(u'3100', u'tcp'), '3100'], networking_config={u'EndpointsConfig': {u'hom7-prom-all_default': {u'IPAMConfig': {}, u'Aliases': ['loki']}}})
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+urllib3.connectionpool._make_request: http://localhost:None "POST /v1.24/containers/create?name=loki HTTP/1.1" 201 90
+compose.cli.verbose_proxy.proxy_callable: docker create_container -> {u'Id': u'5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2',
+ u'Warnings': None}
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container <- (u'5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/containers/5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container -> {u'AppArmorProfile': u'',
+ u'Args': [u'-config.file=/etc/loki/local-config.yaml'],
+ u'Config': {u'ArgsEscaped': True,
+             u'AttachStderr': False,
+             u'AttachStdin': False,
+             u'AttachStdout': False,
+             u'Cmd': [u'-config.file=/etc/loki/local-config.yaml'],
+             u'Domainname': u'',
+             u'Entrypoint': [u'/usr/bin/loki'],
+             u'Env': [u'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'],
+...
+compose.cli.verbose_proxy.proxy_callable: docker attach <- (u'5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2', stderr=True, stream=True, stdout=True)
+urllib3.connectionpool._make_request: http://localhost:None "POST /v1.24/containers/5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2/attach?stream=1&logs=0&stderr=1&stdout=1 HTTP/1.1" 101 0
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/containers/5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker attach -> <docker.types.daemon.CancellableStream object at 0x7f5d53892d10>
+compose.cli.verbose_proxy.proxy_callable: docker disconnect_container_from_network <- (u'5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2', u'hom7-prom-all_default')
+urllib3.connectionpool._make_request: http://localhost:None "POST /v1.24/networks/hom7-prom-all_default/disconnect HTTP/1.1" 200 0
+compose.cli.verbose_proxy.proxy_callable: docker disconnect_container_from_network -> None
+compose.cli.verbose_proxy.proxy_callable: docker connect_container_to_network <- (u'5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2', u'hom7-prom-all_default', ipv4_address=None, link_local_ips=None, ipv6_address=None, links=[], aliases=[u'5260e68fdff9', 'loki'])
+urllib3.connectionpool._make_request: http://localhost:None "POST /v1.24/networks/hom7-prom-all_default/connect HTTP/1.1" 200 0
+compose.cli.verbose_proxy.proxy_callable: docker connect_container_to_network -> None
+compose.cli.verbose_proxy.proxy_callable: docker start <- (u'5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2')
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+compose.parallel.feed_queue: Pending: set([])
+urllib3.connectionpool._make_request: http://localhost:None "POST /v1.24/containers/5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2/start HTTP/1.1" 204 0
+compose.cli.verbose_proxy.proxy_callable: docker start -> None
+compose.cli.verbose_proxy.proxy_callable: docker remove_container <- (u'197e6629fb8458a68d131d9b5b3d585414994ff1dbba54b3ed125c0ac581ae23')
+urllib3.connectionpool._make_request: http://localhost:None "DELETE /v1.24/containers/197e6629fb8458a68d131d9b5b3d585414994ff1dbba54b3ed125c0ac581ae23?force=False&link=False&v=False HTTP/1.1" 204 0
+compose.cli.verbose_proxy.proxy_callable: docker remove_container -> None
+compose.parallel.parallel_execute_iter: Finished processing: <Container: loki (197e66)>
+[1A[2KRecreating loki ... [32mdone[0m[1Bcompose.parallel.feed_queue: Pending: set([])
+compose.parallel.parallel_execute_iter: Finished processing: <Service: loki>
+compose.parallel.feed_queue: Pending: set([])
+Attaching to loki
+[36mloki              |[0m failed parsing config: /etc/loki/local-config.yaml: not a valid duration string: "0"
+compose.cli.verbose_proxy.proxy_callable: docker events <- (decode=True, filters={u'label': [u'com.docker.compose.project=hom7-prom-all', u'com.docker.compose.oneoff=False']})
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/events?filters=%7B%22label%22%3A+%5B%22com.docker.compose.project%3Dhom7-prom-all%22%2C+%22com.docker.compose.oneoff%3DFalse%22%5D%7D HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker events -> <docker.types.daemon.CancellableStream object at 0x7f5d53a702d0>
+compose.cli.verbose_proxy.proxy_callable: docker wait <- (u'5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2')
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container <- (u'5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2')
+urllib3.connectionpool._make_request: http://localhost:None "GET /v1.24/containers/5260e68fdff9c7e6901aebb4b670ed4b8e4e11ac913921179272a879eb360ec2/json HTTP/1.1" 200 None
+compose.cli.verbose_proxy.proxy_callable: docker inspect_container -> {u'AppArmorProfile': u'docker-default',
+ u'Args': [u'-config.file=/etc/loki/local-config.yaml'],
+ u'Config': {u'ArgsEscaped': True,
+             u'AttachStderr': False,
+             u'AttachStdin': False,
+             u'AttachStdout': False,
+             u'Cmd': [u'-config.file=/etc/loki/local-config.yaml'],
+             u'Domainname': u'',
+             u'Entrypoint': [u'/usr/bin/loki'],
+             u'Env': [u'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'],
+...

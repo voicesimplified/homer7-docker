@@ -1,0 +1,59 @@
+function checkRAW()
+	local protoType = GetHEPProtoType()
+	-- Check if we have SIP type 
+	if protoType ~= 1 then
+		return
+	end
+	-- original SIP message Payload
+	local raw = GetRawMessage()
+--	Logp("ERROR", "raw", raw)
+	-- Create lua table 
+	local headers = {}
+--	headers["X-test"] = "Super TEST Header"
+	-- local _, _, name, value = string.find(raw, "(Call-ID:)%s*:%s*(.+)")
+
+local a = "X-VS-TrackingID: 32fab1aaf1e8693a55d35dcb18181152"
+local b = "X-VS-AccountId: 792"
+local c = "X-VS-PresentedCLI: +443334453612"
+
+local n,v = string.match(a,"(X%-VS%-TrackingID):%s*(.+)")
+Logp("ERROR",n,v)
+
+	local name, value = string.find(raw, "(Call%-ID)%s*:%s*(.+)")
+	if name ~= '' and name ~= nil then
+		Logp("ERROR", "Matched!", value)
+		--headers[name] = value
+	end
+	local name, value = string.find(raw,"^(X%-VS%-TrackingID):%s+(.-)$")
+	if name == "X-VS-TrackingID" then
+		Logp("ERROR", name, value)
+		headers[name] = value
+	end
+	local name, value = string.find(raw,"^(X%-VS%-OriginalDDI):%s+(.-)$")
+	if name == "X-VS-OriginalDDI" then
+		Logp("ERROR", name, value)
+	-- Logp("DEBUG", "raw", raw)
+		headers[name] = value
+	end
+	local name, value = string.find(raw,"^(X%-VS%-RTP%-Route):%s+(.-)$")
+	if name == "X-VS-RTP-Route" then
+		Logp("ERROR", name, value)
+	-- Logp("DEBUG", "raw", raw)
+		headers[name] = value
+	end
+	local name, value = string.find(raw,"^(X%-VS%-AccountID):%s+(.-)$")
+	if name == "X-VS-AccountID" then
+		Logp("ERROR", name, value)
+	-- Logp("DEBUG", "raw", raw)
+		headers[name] = value
+	end
+	local name, value = string.find(raw,"^(X%-VS%-PresentedCLI):%s+(.-)%")
+	if name == "X-VS-PresentedCLI" then
+		Logp("ERROR", name, value)
+	-- Logp("DEBUG", "raw", raw)
+		headers[name] = value
+	end
+	SetCustomSIPHeader(headers)
+--		Logp("ERROR", "YO LUA", headers)
+	return 
+end
