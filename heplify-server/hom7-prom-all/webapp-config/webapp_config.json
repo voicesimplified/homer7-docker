@@ -22,6 +22,7 @@
   "http_settings": {
     "debug": false,
     "gzip": true,
+    "gzip_static": true,
     "host": "0.0.0.0",
     "port": 80,
     "root": "/usr/local/homer/dist"
@@ -45,9 +46,9 @@
     "userfilter": "(sAMAccountName=%s)",
     "groupfilter": "(member:1.2.840.113556.1.4.1941:=%s)",
     "admingroup": "HomerAdmins",
-    "adminmode": false,
+    "adminmode": true,
     "usergroup": "HomerUsers",
-    "usermode": false,
+    "usermode": true,
     "attributes": ["dn", "givenName", "sn", "mail", "sAMAccountName"],
     "UseDNForGroupSearch":true
   },
