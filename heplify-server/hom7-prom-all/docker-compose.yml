@@ -77,8 +77,8 @@ services:
       - GF_USERS_ALLOW_SIGN_UP=false
       - GF_EXPLORE_ENABLED=true
     restart: unless-stopped
-    expose:
-      - 3000
+    ports:
+      - "9030:3000"
     healthcheck:
       test: ["CMD-SHELL", "wget --quiet --tries=1 --spider http://localhost:3000/login || exit 1"]
       interval: 1s
@@ -88,7 +88,7 @@ services:
       org.label-schema.group: "monitoring"
 
   loki:
-    image: grafana/loki:master
+    image: grafana/loki
     container_name: loki
     restart: unless-stopped
     expose:
@@ -99,6 +99,7 @@ services:
       org.label-schema.group: "monitoring"
     volumes:
       - ./loki/:/etc/loki/
+
 
 
   caddy:
@@ -120,19 +121,21 @@ services:
 
   heplify-server:
     image: sipcapture/heplify-server:latest
+
     container_name: heplify-server
     ports:
       - "9060:9060"
       - "9060:9060/udp"
+
       - "8008:8008"
     volumes:
       - ./lua/:/app/lua/
+
     command:
       - './heplify-server'
     environment:
       - "HEPLIFYSERVER_HEPADDR=0.0.0.0:9060"
-      - "HEPLIFYSERVER_HEPTLSADDR=0.0.0.0:9060"
-      - "HEPLIFYSERVER_HEPTCPADDR="
+      - "HEPLIFYSERVER_HEPTCPADDR=0.0.0.0:9061"
       - "HEPLIFYSERVER_DBSHEMA=homer7"
       - "HEPLIFYSERVER_DBDRIVER=postgres"
       - "HEPLIFYSERVER_DBADDR=db:5432"
@@ -140,6 +143,7 @@ services:
       - "HEPLIFYSERVER_DBPASS=homerSeven"
       - "HEPLIFYSERVER_DBDATATABLE=homer_data"
       - "HEPLIFYSERVER_DBCONFTABLE=homer_config"
+      - "HEPLIFYSERVER_DBROTATE=true"
       - "HEPLIFYSERVER_DBDROPDAYS=5"
       - "HEPLIFYSERVER_DBROTATE=true"
       - "HEPLIFYSERVER_LOGLVL=debug"
@@ -160,6 +164,7 @@ services:
       - db
     expose:
       - 9090
+      - 9096
     labels:
       org.label-schema.group: "monitoring"
 
@@ -173,6 +178,8 @@ services:
       - "DB_USER=root"
       - "DB_PASS=homerSeven"
     restart: unless-stopped
+    ports:
+      - "9080:80"
     volumes:
       - ./bootstrap:/app/bootstrap
       - ./webapp-config/webapp_config.json:/usr/local/homer/etc/webapp_config.json
