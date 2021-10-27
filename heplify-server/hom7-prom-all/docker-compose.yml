@@ -102,23 +102,6 @@ services:
 
 
 
-  caddy:
-    image: stefanprodan/caddy
-    container_name: caddy
-    ports:
-      - "3000:3000"
-      - "9090:9090"
-      - "9093:9093"
-      - "9080:9080"
-    volumes:
-      - ./caddy/:/etc/caddy/
-    environment:
-      - ADMIN_USER=admin
-      - ADMIN_PASSWORD=admin
-    restart: unless-stopped
-    labels:
-      org.label-schema.group: "monitoring"
-
   heplify-server:
     image: sipcapture/heplify-server:latest
 
