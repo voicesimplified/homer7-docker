@@ -1,87 +1,87 @@
 {
-  "auth_settings": {
-    "_comment": "The type param can be internal, ldap, http_auth",
-    "type": "ldap",
-    "token_expire": 1200
-  },
-  "ldap_config": {
-    "base":  "dc=voicesimplified,dc=com",
-    "host":  "vs-dc01.voicesimplified.com",
-    "port":   389,
-    "usessl": false,
-    "skiptls": true,
-    "binddn": "CN=Bind,CN=Builtin,DC=voicesimplified,DC=com",
-    "bindpassword": "V0!C3simplified",
-    "userfilter": "(uid=%s)",
-    "groupfilter": "(member:1.2.840.113556.1.4.1941:=%s)",
-    "group_attributes": [
-      "cn",
-      "memberOf",
-      "GroupAttribute",
-      "distinguishedName",
-      "dn",
-      "member"
-    ],
-    "admingroup": "HomerAdmins",
-    "adminmode": true,
-    "usergroup": "HomerUsers",
-    "usermode": true,
-    "attributes": ["uid","dn", "givenName", "sn", "mail", "sAMAccountName"]
-    "skipverify": true,
-    "anonymous": false,
-    "userdn": "uid=%s,ou=Users,dc=voicesimplified,dc=com"
-  },
-  "database_config": {
-    "host": "db",
-    "keepalive": false,
-    "name": "homer_config",
-    "pass": "homerSeven",
-    "user": "root"
-  },
-  "database_data": {
-    "local": {
-      "host": "db",
-      "name": "homer_data",
-      "node": "LocalNode",
-      "pass": "homerSeven",
-      "user": "root"
+    "auth_settings": {
+        "_comment": "The type param can be internal, ldap, http_auth",
+        "type": "ldap",
+        "token_expire": 1200
+    },
+    "ldap_config": {
+        "base": "dc=voicesimplified,dc=com",
+        "host": "vs-dc01.voicesimplified.com",
+        "port": 389,
+        "usessl": false,
+        "skiptls": true,
+        "binddn": "CN=Bind,CN=Builtin,DC=voicesimplified,DC=com",
+        "bindpassword": "V0!C3simplified",
+        "userfilter": "(uid=%s)",
+        "groupfilter": "(member:1.2.840.113556.1.4.1941:=%s)",
+        "group_attributes": [
+            "cn",
+            "memberOf",
+            "GroupAttribute",
+            "distinguishedName",
+            "dn",
+            "member"
+        ],
+        "admingroup": "HomerAdmins",
+        "adminmode": true,
+        "usergroup": "HomerUsers",
+        "usermode": true,
+        "attributes": ["uid", "dn", "givenName", "sn", "mail", "sAMAccountName"],
+        "skipverify": true,
+        "anonymous": false,
+        "userdn": "uid=%s,ou=Users,dc=voicesimplified,dc=com"
+    },
+    "database_config": {
+        "host": "db",
+        "keepalive": false,
+        "name": "homer_config",
+        "pass": "homerSeven",
+        "user": "root"
+    },
+    "database_data": {
+        "local": {
+            "host": "db",
+            "name": "homer_data",
+            "node": "LocalNode",
+            "pass": "homerSeven",
+            "user": "root"
+        }
+    },
+    "http_settings": {
+        "debug": false,
+        "gzip": true,
+        "gzip_static": true,
+        "host": "0.0.0.0",
+        "port": 80,
+        "root": "/usr/local/homer/dist"
+    },
+    "influxdb_config": {
+        "database": "homer",
+        "host": "http://influx_host:8086",
+        "name": "homer_config",
+        "pass": "influx_pass",
+        "policy": "autogen",
+        "user": "influx_user"
+    },
+    "loki_config": {
+        "api": "api/prom",
+        "host": "http://loki:3100",
+        "pass": "loki_pass",
+        "user": "loki_user"
+    },
+    "prometheus_config": {
+        "api": "api/v1",
+        "host": "http://prometheus:9090",
+        "pass": "prom_pass",
+        "user": "prom_user"
+    },
+    "system_settings": {
+        "_comment": "loglevel can be: fatal, error, warn, info, debug, trace",
+        "hostname": "f325569d5d5a",
+        "loglevel": "trace",
+        "logname": "homer-app.log",
+        "logpath": "/usr/local/homer",
+        "logstdout": false,
+        "uuid": "7be657dd-0447-4925-835c-6fbbfabfd6d9"
     }
-  },
-  "http_settings": {
-    "debug": false,
-    "gzip": true,
-    "gzip_static": true,
-    "host": "0.0.0.0",
-    "port": 80,
-    "root": "/usr/local/homer/dist"
-  },
-  "influxdb_config": {
-    "database": "homer",
-    "host": "http://influx_host:8086",
-    "name": "homer_config",
-    "pass": "influx_pass",
-    "policy": "autogen",
-    "user": "influx_user"
-  },
-  "loki_config": {
-    "api": "api/prom",
-    "host": "http://loki:3100",
-    "pass": "loki_pass",
-    "user": "loki_user"
-  },
-  "prometheus_config": {
-    "api": "api/v1",
-    "host": "http://prometheus:9090",
-    "pass": "prom_pass",
-    "user": "prom_user"
-  },
-  "system_settings": {
-    "_comment": "loglevel can be: fatal, error, warn, info, debug, trace",
-    "hostname": "f325569d5d5a",
-    "loglevel": "trace",
-    "logname": "homer-app.log",
-    "logpath": "/usr/local/homer",
-    "logstdout": false,
-    "uuid": "7be657dd-0447-4925-835c-6fbbfabfd6d9"
-  }
 }
